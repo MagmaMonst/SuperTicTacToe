@@ -1,0 +1,97 @@
+/* Reset */
+body, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f4f8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #333;
+  }
+  
+  .container {
+    text-align: center;                                 
+    max-width: 700px;
+    width: 100%;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #2c3e50;
+  }
+  
+  #game {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin: 20px 0;
+  }
+  
+  .board {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5px;
+    background-color: #ecf0f1;
+    border: 2px solid #bdc3c7;
+    border-radius: 5px;
+    aspect-ratio: 1;
+    position: relative;
+  }
+  
+  .cell {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    background: #ffffff;
+    border: 1px solid #dcdde1;
+    cursor: pointer;
+    user-select: none;
+    transition: background 0.3s, transform 0.2s;
+  }
+  
+  .cell.taken {
+    cursor: not-allowed;
+    color: #95a5a6;
+  }
+  
+  .cell:hover:not(.taken) {
+    background: #f1c40f;
+    transform: scale(1.1);
+  }
+  
+  #status {
+    margin-top: 15px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #34495e;
+  }
+  
+  /* Highlight active boards */
+  .board.active {
+    box-shadow: 0 0 15px rgba(52, 152, 219, 0.5);
+    border-color: #3498db;
+  }
+  
+  .board.winner-x {
+    background-color: rgba(39, 174, 96, 0.3);
+  }
+  
+  .board.winner-o {
+    background-color: rgba(192, 57, 43, 0.3);
+  }
+
+
+  
